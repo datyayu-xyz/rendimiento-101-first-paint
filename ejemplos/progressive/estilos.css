@@ -1,0 +1,30 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.content {
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 4.5em);
+    margin-top: .5em;
+    padding: 1em;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.table {
+    width: 90vw;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #f4f4f4;
+}
+
+.table tr {
+    text-align: center;
+    border-bottom: 1px solid #6f6f6f;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: .5em;
+}

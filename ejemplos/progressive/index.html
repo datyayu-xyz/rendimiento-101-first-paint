@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Open sans', helvetica, arial, sans-serif, serif;
+            background-color: #64b5f6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: #1565c0;
+            color: white;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 1px 1px 6px 2px #333;
+            height: 4em;
+            box-sizing: border-box;
+        }
+
+        .nav-list {
+            display: flex;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .nav-title {
+            margin: 0;
+        }
+
+        .nav-item {
+            margin: 0 1em;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1 class="nav-title">Test</h1>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Usuarios</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Config</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="js-table">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function loadCSS(url, targetChild, mediaType){
+            var linkElement = window.document.createElement("link");
+            var targetElement = targetChild || window.document.getElementsByTagName("script")[0];
+
+            linkElement.rel = "stylesheet";
+            linkElement.href = url;
+            linkElement.media = "only x";
+
+            targetElement.parentNode.insertBefore(linkElement, targetElement);
+
+            setTimeout(function(){ linkElement.media = mediaType || "all" })
+        }
+
+        loadCSS('./estilos.css');
+    </script>
+</body>
+</html>
